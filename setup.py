@@ -92,7 +92,7 @@ setup(
     },
     install_requires=[
         "scipy>=0.19.0",
-        "torch>=1.6",
+        "torch>=1.5",
         "numpy>=1.16.0",
 	"numba==0.48.0",
         "librosa==0.6.2",
