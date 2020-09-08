@@ -217,3 +217,15 @@ def javalg(root_path, meta_file):
             text = cols[1]
             items.append([text, wav_file, speaker_name])
     return items
+def indo(root_path, meta_file):
+    """Normalizes the Nancy meta data file to TTS format"""
+    txt_file = os.path.join(root_path, meta_file)
+    items = []
+    speaker_name = "indo-speakers"
+    with open(txt_file, 'r') as ttf:
+        for line in ttf:
+            cols = line.split('\t')
+            wav_file = os.path.join(root_path, 'clips', cols[1] + '.mp3')
+            text = cols[2]
+            items.append([text, wav_file, speaker_name])
+    return items
